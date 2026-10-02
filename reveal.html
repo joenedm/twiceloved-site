@@ -1,0 +1,187 @@
+<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex"><title>Your Wedding Vision | Twice Loved</title>
+<meta name="description" content="Here's the wedding we see for you.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Kalam&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+<link rel="stylesheet" href="css/tl.css">
+<style>
+:root { --c1:#8DA4BE; --c2:#F4EFE4; --c3:#FBFAF7; --c4:#C9CED6 }
+.hero { text-align:center; padding:40px 0 30px; background:radial-gradient(ellipse at top, color-mix(in srgb, var(--c1) 22%, #fff) 0%, #fff 70%) }
+.hero .for { letter-spacing:.24em; text-transform:uppercase; font-size:12.5px; font-weight:700; color:var(--soft) }
+.hero h1 { font-family:var(--serif); font-weight:600; font-size:clamp(34px,5.4vw,58px); margin-top:6px }
+.names { font-family:var(--script); color:var(--blue); font-size:clamp(48px,8vw,90px); line-height:1.1; margin-top:8px }
+.story { font-family:var(--serif); font-style:italic; font-size:clamp(21px,2.6vw,27px); max-width:36em; margin:14px auto 0; line-height:1.45 }
+.drops { list-style:none; padding:0; margin:24px auto 0; display:flex; gap:clamp(12px,3vw,26px); justify-content:center; flex-wrap:wrap }
+.drops li { display:grid; justify-items:center; gap:4px; width:84px; font-size:13px; color:var(--soft) } .drops i { width:54px; height:54px; border-radius:50% 50% 50% 8%; transform:rotate(-45deg); box-shadow:inset 0 0 0 1px rgba(0,0,0,.08), 0 8px 16px -10px rgba(0,0,0,.45); margin-bottom:6px }
+.dnaline { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-top:18px } .dnaline span { background:#fff; border:1px solid var(--line); border-radius:999px; padding:4px 13px; font-size:14px; font-weight:600 }
+.wall { background-color:color-mix(in srgb, var(--c2) 55%, #fff); background-image:repeating-linear-gradient(90deg, transparent 0 34px, color-mix(in srgb, var(--c1) 14%, transparent) 34px 36px, transparent 36px 46px); padding:44px 0 56px }
+.board { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:34px 26px; margin-top:26px }
+.vc { display:grid; gap:12px; align-content:start }
+.vc .frame { transform:rotate(var(--t,0deg)) } .vc .mat { min-height:200px; display:grid; place-items:center }
+.tile { width:100%; aspect-ratio:4/5; border-radius:2px; display:grid; place-items:center; text-align:center; padding:18px; background:linear-gradient(160deg, var(--c2) 0%, color-mix(in srgb, var(--c1) 55%, #fff) 60%, var(--c1) 100%); color:#fff }
+.tile b { font-family:var(--script); font-weight:400; font-size:44px; text-shadow:0 1px 8px rgba(0,0,0,.25) }
+.cap { background:#fff; border-radius:14px; padding:14px 16px; box-shadow:0 10px 24px -18px rgba(25,35,55,.5) }
+.cap .k { font-family:var(--hand); color:var(--accent); font-size:16px } .cap h3 { font-family:var(--serif); font-weight:600; font-size:24px } .cap p { color:var(--soft); font-size:15.5px; margin-top:4px }
+.fb { display:flex; gap:6px; flex-wrap:wrap; margin-top:10px } .fb button { border:1.5px solid var(--line); background:#fff; border-radius:999px; padding:7px 12px; font:700 13.5px var(--body); cursor:pointer; color:var(--ink) }
+.fb button.on.love { background:var(--blue); border-color:var(--blue); color:#fff } .fb button.on.maybe { background:var(--mist); border-color:var(--blue2) } .fb .ftl { margin-left:auto; color:var(--blue); border-color:var(--blue2) } .fb .ftl.on { background:var(--blue2); color:#fff }
+.vc.swap .frame, .vc.swap .cap { animation:rin .6s ease both }
+.tune { background:#fff; border:2px solid var(--blue2); border-radius:20px; padding:24px; margin-top:30px; display:grid; gap:14px }
+.tune[hidden] { display:none } .pills { display:flex; gap:8px; flex-wrap:wrap } .pills button { border:1.5px solid var(--blue2); background:var(--mist); border-radius:999px; padding:6px 12px; font:600 14px var(--body); cursor:pointer } .pills button::after { content:" \2715"; color:var(--soft) }
+.panel { background:#fff; border:1px solid var(--line); border-radius:20px; padding:clamp(18px,4vw,30px) }
+.opts3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px } @media (max-width:760px) { .opts3 { grid-template-columns:1fr } }
+.bars { display:grid; gap:10px } .bar2 { display:grid; grid-template-columns:170px 1fr 70px; gap:12px; align-items:center; font-size:15px } .bar2 .t { height:12px; border-radius:9px; background:var(--mist); overflow:hidden } .bar2 .t i { display:block; height:100%; background:var(--blue2) } .bar2 b { text-align:right }
+@media (max-width:520px) { .bar2 { grid-template-columns:1fr 60px } .bar2 .t { grid-column:1/-1; order:3 } }
+.qtys { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px } .qtys div { background:var(--wash); border-radius:12px; padding:12px } .qtys b { display:block; font-family:var(--display); font-size:26px }
+.save { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; text-align:center } .save div { background:var(--wash); border-radius:14px; padding:16px } .save b { display:block; font-family:var(--display); font-size:30px } .save .g b { color:var(--blue) }
+@media (max-width:560px) { .save { grid-template-columns:1fr } }
+.est { font-size:13.5px; color:var(--soft); margin-top:8px }
+.looks { display:grid; gap:12px } .look { border:1px solid var(--line); border-radius:14px; padding:14px 16px; display:grid; gap:6px } .look .crit { font-size:14px; color:var(--soft) }
+.links { display:flex; gap:8px; flex-wrap:wrap } .links a { font-size:13.5px; font-weight:700; border:1.5px solid var(--line); border-radius:999px; padding:5px 11px; text-decoration:none; color:var(--blue) }
+.unlock { text-align:center; background:linear-gradient(160deg, var(--mist), #fff); border:1.5px solid var(--blue2); border-radius:24px; padding:clamp(24px,5vw,44px) }
+.unlock .amt { font-family:var(--display); font-size:64px; color:var(--blue); line-height:1 } .unlock ul { text-align:left; max-width:560px; margin:18px auto; columns:2 260px; padding-left:18px } .unlock li::marker { color:var(--blue2) }
+.mode { display:inline-block; background:var(--blue); color:#fff; border-radius:999px; padding:4px 14px; font-weight:700; font-size:14px }
+</style></head><body>
+<header class="top"><div class="wrap"><a class="logo" href="/"><svg width="34" height="22" viewBox="0 0 34 22" aria-hidden="true"><circle cx="12" cy="11" r="8.5" fill="none" stroke="#4F6582" stroke-width="2.6"/><circle cx="22" cy="11" r="8.5" fill="none" stroke="#8DA4BE" stroke-width="2.6"/></svg>Twice Loved <span class="hand">wedding finds</span></a><a href="wedding.html" class="soft" style="font-size:15px">Edit my answers</a></div></header>
+
+<div id="empty" class="narrow center" style="padding:80px 16px;text-align:center" hidden><h2>Let's start with your story.</h2><p class="soft" style="margin:12px 0 24px">We couldn't find your answers on this device.</p><a class="btn" href="wedding.html">Build my wedding vision</a></div>
+
+<main id="main" hidden>
+<section class="hero" style="padding-block:40px 34px"><div class="wrap">
+  <p class="for">for <span id="nm1"></span></p>
+  <h1 class="reveal-in">Here's the wedding we see for you.</h1>
+  <p class="names reveal-in" id="names" style="animation-delay:.2s"></p>
+  <p class="story reveal-in" id="story" style="animation-delay:.4s"></p>
+  <ul class="drops reveal-in" id="drops" style="animation-delay:.6s"></ul>
+  <div class="dnaline" id="dnaline"></div>
+</div></section>
+
+<section class="wall"><div class="wrap">
+  <div class="head center" style="text-align:center"><p class="kick">your vision board</p><h2>Every part of your day, imagined.</h2><p>Tell us what you think of each one. <b>Love this</b>, <b>Maybe</b>, or <b>Not us</b>. When something isn't you, we'll learn and show you something different. Tap <b>Find this look</b> on anything you want us to source.</p></div>
+  <div class="board" id="board"></div>
+  <div class="tune" id="tune" hidden>
+    <div id="ask"><h3 style="font-family:var(--serif);font-weight:600;font-size:28px">We want to get this right.</h3><p class="soft">It looks like we haven't quite captured what's in your head yet. Would you like to help us fine-tune your vision?</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px"><button class="btn" type="button" id="tuneYes">Yes, let's fine-tune</button><button class="btn ghost" type="button" id="tuneNo">Keep showing me ideas</button></div></div>
+    <div id="tuner" hidden><h3 style="font-family:var(--serif);font-weight:600;font-size:26px">Here's what we currently think you're looking for:</h3><div class="pills" id="pills"></div><p class="soft" style="font-size:14px">Tap one to remove it.</p>
+      <p style="font-weight:700;margin-top:6px">What are we missing?</p><div class="chips" id="addStyles"></div>
+      <div class="field"><label class="lab" for="tuneText">Describe it in your own words</label><textarea id="tuneText" placeholder="more candles, less flowers, think old library more than garden"></textarea></div>
+      <div><button class="btn" type="button" id="tuneGo">Update my vision</button></div></div>
+  </div>
+</div></section>
+
+<section><div class="narrow" style="display:grid;gap:30px">
+  <div class="panel"><p class="kick">one quick question</p><h2 style="font-size:30px">How should we bring your vision to life?</h2>
+    <div class="opts3" style="margin-top:16px">
+      <label class="card"><input type="radio" name="close" value="Match my vision closely"><span class="in"><h4>Match my vision closely</h4><p>I want the closest possible match.</p></span></label>
+      <label class="card"><input type="radio" name="close" value="Keep the feeling"><span class="in"><h4>Keep the feeling</h4><p>Similar items are fine if they save money or are easier to find.</p></span></label>
+      <label class="card"><input type="radio" name="close" value="Budget comes first"><span class="in"><h4>Budget comes first</h4><p>Keep the overall look, but prioritize affordability.</p></span></label></div></div>
+
+  <div class="panel"><p class="kick">your budget, working for you</p><h2 style="font-size:30px">Here's how your <span id="bt"></span> decor budget could stretch.</h2>
+    <p class="soft" style="margin:8px 0 18px" id="bnote"></p><div class="bars" id="bars"></div></div>
+
+  <div class="panel"><p class="kick">so you don't overbuy</p><h2 style="font-size:30px">What you'll actually need</h2><p class="soft" style="margin:8px 0 16px" id="qnote"></p><div class="qtys" id="qtys"></div></div>
+
+  <div class="panel"><p class="kick">the savings</p><h2 style="font-size:30px">What your vision could cost</h2><p class="soft" style="margin:8px 0 16px">Based on the looks you're keeping on your board.</p>
+    <div class="save"><div><span>Typical retail</span><b id="sr"></b></div><div><span>Twice Loved approach</span><b id="sp"></b></div><div class="g"><span>You could save</span><b id="ss"></b></div></div>
+    <p class="est">These are estimates based on typical prices for each look. Your complete plan replaces them with real items and current prices.</p>
+    <p style="margin-top:14px"><span class="mode" id="mode"></span> <span class="soft" id="mnote"></span></p></div>
+
+  <div class="panel" id="lookPanel"><p class="kick">find this look</p><h2 style="font-size:30px">Your looks to source</h2><p class="soft" style="margin:8px 0 16px">Tap <b>Find this look</b> on your board to add pieces here. In your complete plan we find real items for each one: new, pre-loved, Bride-to-Bride and DIY. For now, here's what we'll search for and where.</p><div class="looks" id="looks"></div></div>
+
+  <div class="unlock"><p class="kick">ready to make it real?</p><h2>Unlock your complete wedding plan</h2><p class="amt" style="margin-top:12px">$49</p>
+    <ul><li>Real items for every look, with prices and links</li><li>New, pre-loved, local and Bride-to-Bride options</li><li>Your budget, category by category</li><li>Exact quantities, so you don't overbuy</li><li>Hot Glue &amp; Love DIY projects with step-by-step instructions</li><li>What to buy now and what can wait</li><li>Your savings, item by item</li><li>A beautiful personalized PDF in your colors</li><li>Bride-to-Bride shopping access included</li></ul>
+    <button class="btn big" type="button" id="unlock">Unlock my plan, $49</button>
+    <p class="soft" style="font-size:14px;margin-top:12px" id="paynote">You'll pay securely with PayPal. Choose "Goods and Services." Once we confirm your payment, your plan arrives by email.</p></div>
+</div></section>
+</main>
+<form name="vision-feedback" method="POST" data-netlify="true" netlify-honeypot="company" id="fbForm" hidden><input type="hidden" name="form-name" value="vision-feedback"><input name="company"><input name="name"><input name="email"><input name="closeness"><textarea name="loved"></textarea><textarea name="maybe"></textarea><textarea name="not_us"></textarea><textarea name="find_this_look"></textarea><textarea name="tuning"></textarea><input name="estimate"><input name="intent"><textarea name="dna_json"></textarea></form>
+<footer class="site"><div class="wrap"><span>Made with love by Joe &amp; Hailey · <a href="/">Twice Loved Wedding Finds</a></span><span>Inspiration photos are shown with Pinterest's embed and belong to their creators.</span></div></footer>
+
+<script src="js/tl-engine.js"></script>
+<script>
+(function () {
+  var TL = window.TL, $ = function (id) { return document.getElementById(id); }, esc = function (t) { var x = document.createElement('span'); x.textContent = t == null ? '' : t; return x.innerHTML; };
+  var A = null, m = location.hash.match(/a=([^&]+)/); if (m) A = TL.dec(m[1]); if (!A) A = TL.load('tl_answers');
+  if (!A) { $('empty').hidden = false; return; } $('main').hidden = false; TL.save('tl_answers', A);
+  var d = TL.buildDNA(A), state = TL.load('tl_state_' + (A.email || '')) || { picks: {}, shown: {}, fb: {}, ftl: {}, rejects: 0, pins: {}, tuning: '' };
+  if (state.rejected) d.rejected = state.rejected; if (state.extraTags) Object.keys(state.extraTags).forEach(function (t) { d.tags[t] = (d.tags[t] || 0) + state.extraTags[t]; }); if (state.removed) state.removed.forEach(function (t) { delete d.tags[t]; });
+  var C = d.colors; ['--c1', '--c2', '--c3', '--c4'].forEach(function (k, i) { document.documentElement.style.setProperty(k, [C.main, C.second, C.neutral, C.metal][i][1]); });
+  // hero
+  var names = d.names.filter(Boolean); $('nm1').textContent = names.join(' & '); $('names').innerHTML = names.map(esc).join(' <span style="font-family:var(--serif);font-style:italic;font-size:.55em;color:var(--gold)">&amp;</span> ');
+  $('story').textContent = TL.narrative(d);
+  $('drops').innerHTML = [C.main, C.second, C.neutral, C.metal].map(function (c) { return '<li><i style="background:' + c[1] + '"></i>' + esc(c[0]) + '</li>'; }).join('');
+  $('dnaline').innerHTML = [d.settings[0], d.paletteName, d.feelings.slice(0, 2).join(' + '), d.formality, d.guests + ' guests', TL.money(d.budget.decor) + ' decor'].filter(Boolean).map(function (t) { return '<span>' + esc(t) + '</span>'; }).join('');
+  // board
+  var tilts = [-1.4, 1, -0.6, 1.5, -1.1, 0.7, -1.6, 1.2, -0.8, 1.3], styles = ['', 'white', 'wood', 'white', '', 'white', 'wood', '', 'white', ''];
+  function persist() { state.rejected = d.rejected; TL.save('tl_state_' + (A.email || ''), state); }
+  function cardHTML(a, idx) {
+    var i = state.picks[a.k]; var v = a.v[i]; var pin = state.pins[a.k];
+    var media = pin ? '<a data-pin-do="embedPin" data-pin-width="medium" data-pin-terse="true" href="https://www.pinterest.com/pin/' + pin + '/"></a>' : '<div class="tile"><b>' + esc(a.name.toLowerCase()) + '</b></div>';
+    var f = state.fb[a.k] || '';
+    return '<figure class="frame ' + styles[idx % 10] + '" style="--t:' + tilts[idx % 10] + 'deg"><div class="mat">' + media + '</div></figure>' +
+      '<div class="cap"><p class="k">' + esc(a.kick) + '</p><h3>' + esc(a.name) + '</h3><p>' + esc(TL.fill(v.t, d)) + '.</p>' +
+      '<div class="fb"><button type="button" class="love' + (f === 'love' ? ' on' : '') + '" data-a="love">&#9825; Love this</button><button type="button" class="maybe' + (f === 'maybe' ? ' on' : '') + '" data-a="maybe">Maybe</button><button type="button" data-a="not">Not us</button>' +
+      '<button type="button" class="ftl' + (state.ftl[a.k] ? ' on' : '') + '" data-a="ftl">' + (state.ftl[a.k] ? '&#10003; Finding it' : 'Find this look') + '</button></div></div>';
+  }
+  function choose(a, fresh) {
+    if (state.picks[a.k] == null || fresh) { var shown = state.shown[a.k] || []; var i = TL.pick(a, d, fresh ? shown : []); if (i == null) { state.shown[a.k] = []; i = TL.pick(a, d, [state.picks[a.k]]); } state.picks[a.k] = i; state.shown[a.k] = (state.shown[a.k] || []).concat([i]);
+      var usedPins = Object.keys(state.pins).filter(function (k) { return k !== a.k; }).map(function (k) { return state.pins[k]; }); if (fresh && state.pins[a.k]) usedPins.push(state.pins[a.k]); state.pins[a.k] = TL.pinFor(a.k, d, usedPins); }
+  }
+  function render(onlyK) {
+    TL.AREAS.forEach(function (a, idx) { choose(a); var el = document.querySelector('[data-k="' + a.k + '"]'); if (!el) { el = document.createElement('div'); el.className = 'vc'; el.dataset.k = a.k; $('board').appendChild(el); }
+      if (!onlyK || onlyK === a.k) { el.innerHTML = cardHTML(a, idx); if (onlyK) { el.classList.remove('swap'); void el.offsetWidth; el.classList.add('swap'); } } });
+    if (window.PinUtils && PinUtils.build) PinUtils.build();
+    persist(); totals(); looks();
+  }
+  $('board').addEventListener('click', function (e) { var b = e.target.closest('button[data-a]'); if (!b) return; var k = b.closest('.vc').dataset.k, a = TL.AREAS.filter(function (x) { return x.k === k; })[0], act = b.dataset.a;
+    if (act === 'love') { state.fb[k] = state.fb[k] === 'love' ? '' : 'love'; if (state.fb[k]) TL.love(d, a, state.picks[k]); render(k); }
+    else if (act === 'maybe') { state.fb[k] = state.fb[k] === 'maybe' ? '' : 'maybe'; render(k); }
+    else if (act === 'ftl') { state.ftl[k] = !state.ftl[k]; render(k); }
+    else if (act === 'not') { TL.reject(d, a, state.picks[k]); state.fb[k] = ''; state.ftl[k] = false; state.rejects++; state.notUs = (state.notUs || []).concat([a.name + ': ' + TL.fill(a.v[state.picks[k]].t, d)]);
+      choose(a, true); render(k); if (state.rejects >= 4 && !state.tuneAsked) { state.tuneAsked = true; $('tune').hidden = false; $('ask').hidden = false; $('tuner').hidden = true; $('tune').scrollIntoView({ behavior: 'smooth', block: 'center' }); } } });
+  // fine-tune
+  function topTags() { return Object.keys(d.tags).filter(function (t) { return d.tags[t] > 1 && !d.avoid[t]; }).sort(function (x, y) { return d.tags[y] - d.tags[x]; }).slice(0, 8); }
+  function nice(t) { return { candlelit: 'Candlelight', candles: 'Candles', stringlights: 'String lights', budvase: 'Bud vases', blue: C.main[0], green: 'Greenery' }[t] || t.charAt(0).toUpperCase() + t.slice(1); }
+  $('tuneYes').onclick = function () { $('ask').hidden = true; $('tuner').hidden = false; $('pills').innerHTML = topTags().map(function (t) { return '<button type="button" data-t="' + t + '">' + esc(nice(t)) + '</button>'; }).join('');
+    $('addStyles').innerHTML = TL.FEELINGS.map(function (f) { return '<label class="chip"><input type="checkbox" value="' + f + '"><span>' + f + '</span></label>'; }).join(''); };
+  $('tuneNo').onclick = function () { $('tune').hidden = true; };
+  $('pills').addEventListener('click', function (e) { var b = e.target.closest('button[data-t]'); if (!b) return; state.removed = (state.removed || []).concat([b.dataset.t]); delete d.tags[b.dataset.t]; b.remove(); });
+  $('tuneGo').onclick = function () { state.extraTags = state.extraTags || {}; [].forEach.call($('addStyles').querySelectorAll('input:checked'), function (c) { var t = c.value.toLowerCase().replace('garden-inspired', 'garden'); d.tags[t] = (d.tags[t] || 0) + 3; state.extraTags[t] = (state.extraTags[t] || 0) + 3; });
+    var txt = $('tuneText').value.trim(); state.tuning = (state.tuning ? state.tuning + ' | ' : '') + txt; var l = txt.toLowerCase();
+    [['candle', 'candles'], ['flower', 'garden'], ['green', 'garden'], ['vintage', 'vintage'], ['modern', 'modern'], ['simple', 'minimal'], ['glam', 'formal'], ['rustic', 'rustic'], ['beach', 'coastal'], ['moody', 'moody'], ['light', 'stringlights']].forEach(function (p) { if (l.indexOf(p[0]) > -1) { var neg = new RegExp('(less|no|not|fewer)\\s+' + p[0]).test(l); d.tags[p[1]] = (d.tags[p[1]] || 0) + (neg ? -4 : 3); if (neg) d.rejected[p[1]] = (d.rejected[p[1]] || 0) + 2; } });
+    TL.AREAS.forEach(function (a) { if (state.fb[a.k] !== 'love') choose(a, true); }); state.rejects = 0; state.tuneAsked = false; $('tune').hidden = true; $('board').innerHTML = ''; render(); $('story').textContent = TL.narrative(d); $('board').scrollIntoView({ behavior: 'smooth' }); };
+  // closeness
+  document.querySelectorAll('input[name=close]').forEach(function (r) { if (state.close === r.value) r.checked = true; r.onchange = function () { state.close = r.value; persist(); }; });
+  // budget + qty + savings + timeline
+  var B = TL.budget(d); $('bt').textContent = TL.money(B.total);
+  $('bnote').textContent = 'We set aside ' + TL.money(B.buffer) + ' as a cushion for surprises' + (d.venueProvides.length ? ', and skipped what your venue already provides (' + d.venueProvides.join(', ').toLowerCase() + ')' : '') + '. Every recommendation in your plan stays inside these amounts.';
+  var mx = Math.max.apply(null, B.rows.map(function (r) { return r.amt; }));
+  $('bars').innerHTML = B.rows.map(function (r) { return '<div class="bar2"><span>' + esc(r.name) + '</span><span class="t"><i style="width:' + Math.round(r.amt / mx * 100) + '%"></i></span><b>' + TL.money(r.amt) + '</b></div>'; }).join('') + '<div class="bar2"><span>Cushion</span><span class="t"><i style="width:' + Math.round(B.buffer / mx * 100) + '%;background:var(--line)"></i></span><b>' + TL.money(B.buffer) + '</b></div>';
+  var Q = TL.qty(d); $('qnote').textContent = d.guests + ' guests at ' + d.perTable + ' per table is about ' + Q.tables + ' tables. We add a small cushion for breakage, never a full extra set.';
+  $('qtys').innerHTML = [['Tables', Q.tables], ['Centerpieces', Q.centerpieces], ['Table numbers', Q.tableNumbers], ['Runners', Q.runners], ['Place settings', Q.settings], ['Votive candles', Q.votives]].map(function (x) { return '<div><b>' + x[1] + '</b>' + x[0] + '</div>'; }).join('');
+  var T = TL.timeline(d); $('mode').textContent = T.mode; $('mnote').textContent = T.note;
+  function totals() { var E = TL.estimate(d, state.picks); $('sr').textContent = TL.money(E.retail); $('sp').textContent = TL.money(E.plan); $('ss').textContent = TL.money(E.save); state.est = E; }
+  // find this look (honest search links only)
+  function q(s) { return encodeURIComponent(s); }
+  function looks() { var keys = Object.keys(state.ftl).filter(function (k) { return state.ftl[k]; });
+    if (!keys.length) { $('looks').innerHTML = '<p class="soft">Nothing yet. Tap <b>Find this look</b> on any part of your board.</p>'; return; }
+    var cat = {}; B.rows.forEach(function (r) { cat[r.k] = r.amt; });
+    $('looks').innerHTML = keys.map(function (k) { var a = TL.AREAS.filter(function (x) { return x.k === k; })[0], v = a.v[state.picks[k]], item = v.items[0];
+      var term = item ? (/cheesecloth|runner|napkin|drape|fabric/i.test(item[0]) ? C.main[0].toLowerCase() + ' ' : '') + item[0].toLowerCase().replace(/\s*\(.*\)/, '') : a.name.toLowerCase();
+      var lim = cat[k] || cat.details || 0;
+      return '<div class="look"><b>' + esc(a.name) + '</b><span>' + esc(TL.fill(v.t, d)) + '</span><span class="crit">Color: ' + esc(C.main[0]) + ' · Budget: up to ' + TL.money(lim) + ' · Near ' + esc(d.zip || d.location) + (d.radius ? ' within ' + d.radius + ' miles' : '') + ' · ' + esc(T.mode) + '</span>' +
+        '<div class="links"><a target="_blank" rel="noopener" href="https://www.facebook.com/marketplace/search/?query=' + q(term + ' wedding') + '">Search Marketplace near you</a><a target="_blank" rel="noopener" href="https://www.amazon.com/s?k=' + q(term + ' wedding') + '">Search Amazon</a><a target="_blank" rel="noopener" href="https://www.etsy.com/search?q=' + q(term + ' wedding') + '">Search Etsy</a><a target="_blank" rel="noopener" href="https://www.walmart.com/search?q=' + q(term) + '">Search Walmart</a></div></div>'; }).join(''); }
+  render();
+  // save + unlock
+  function send(intent) { var f = $('fbForm'), put = function (n, v) { f.elements[n].value = v || ''; }, list = function (s) { return TL.AREAS.filter(function (a) { return state.fb[a.k] === s; }).map(function (a) { return a.name + ': ' + TL.fill(a.v[state.picks[a.k]].t, d); }).join('\n'); };
+    put('name', d.names.filter(Boolean).join(' & ')); put('email', d.email); put('closeness', state.close); put('loved', list('love')); put('maybe', list('maybe')); put('not_us', (state.notUs || []).join('\n'));
+    put('find_this_look', TL.AREAS.filter(function (a) { return state.ftl[a.k]; }).map(function (a) { return a.name; }).join(', ')); put('tuning', state.tuning); put('estimate', state.est ? TL.money(state.est.retail) + ' retail vs ' + TL.money(state.est.plan) + ' plan' : ''); put('intent', intent); put('dna_json', JSON.stringify(A));
+    return fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(f)).toString() }).catch(function () {}); }
+  $('unlock').onclick = function () { if (!state.close) { document.querySelector('input[name=close]').closest('.panel').scrollIntoView({ behavior: 'smooth', block: 'center' }); $('paynote').textContent = 'First, tell us how closely to match your vision (just above).'; return; }
+    var w = window.open('about:blank', '_blank'); send('unlock-49').then(function () { if (w) w.location = 'https://paypal.me/loffredo0919/49'; else location.href = 'https://paypal.me/loffredo0919/49'; });
+    $('paynote').innerHTML = 'Thank you! Finish paying in the PayPal tab (choose "Goods and Services"). Once we confirm your payment, your complete plan arrives at <b>' + esc(d.email) + '</b>.'; };
+  var sentPreview = false; window.addEventListener('pagehide', function () { if (!sentPreview && Object.keys(state.fb).length) { sentPreview = true; send('preview'); } });
+  var sc = document.createElement('script'); sc.async = true; sc.src = 'https://assets.pinterest.com/js/pinit.js'; document.body.appendChild(sc);
+})();
+</script>
+</body></html>

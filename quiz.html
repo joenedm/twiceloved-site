@@ -1,0 +1,403 @@
+<!doctype html><html lang="en" data-theme="light" style="color-scheme:light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Your Wedding Vibe Quiz | Twice Loved</title>
+<meta name="description" content="Tell us about your wedding in about 5 minutes. Joe & Hailey make you a free vision board and find your first 3 decor pieces for free.">
+<link rel="canonical" href="https://twicelovedweddings.com/quiz.html">
+<meta property="og:title" content="Your Wedding Vibe Quiz | Twice Loved"><meta property="og:description" content="5 minutes. A free vision board made for you, plus your first 3 decor finds free.">
+<meta property="og:image" content="https://twicelovedweddings.com/og.jpg"><meta property="og:url" content="https://twicelovedweddings.com/quiz.html"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Kalam:wght@400;700&display=swap">
+<style>
+:root {
+  --paper: #FFFFFF; --wash: #EEF3F8; --ink: #26303D; --soft: #5E6B7C; --line: #D8E1EC;
+  --green: #4F6582; --green-ink: #FFFFFF; --rose: #6F8BAE; --card: #FFFFFF; --tape: rgba(141,164,190,.32);
+  --display: "Young Serif", Georgia, serif; --body: "Nunito Sans", "Segoe UI", system-ui, sans-serif; --hand: "Kalam", "Comic Sans MS", cursive;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #141922; --wash: #1B222D; --ink: #E9EEF5; --soft: #A9B5C6; --line: #2D3746;
+    --green: #9FB6D3; --green-ink: #121B28; --rose: #B9CAE0; --card: #212937; --tape: rgba(159,182,211,.3); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #141922; --wash: #1B222D; --ink: #E9EEF5; --soft: #A9B5C6; --line: #2D3746;
+  --green: #9FB6D3; --green-ink: #121B28; --rose: #B9CAE0; --card: #212937; --tape: rgba(159,182,211,.3); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--wash); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; margin: 0; }
+.wrap { max-width: 760px; margin: 0 auto; padding-inline: 16px; }
+h1, h2 { font-family: var(--display); font-weight: 400; line-height: 1.15; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(32px, 5vw, 46px); }
+h2 { font-size: clamp(25px, 4vw, 32px); }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; }
+.top { padding-block: 16px; }
+.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.logo { font-family: var(--display); font-size: 21px; text-decoration: none; display:inline-flex; align-items:center; gap:8px; }
+.logo .hand { font-family: var(--hand); color: var(--rose); font-size: 18px; }
+.intro { padding-block: 18px 22px; display: grid; gap: 10px; }
+.intro .hi { font-family: var(--hand); color: var(--rose); font-size: 22px; }
+.intro p { color: var(--soft); }
+.bar { height: 8px; background: var(--line); border-radius: 99px; overflow: hidden; margin-bottom: 8px; }
+.bar i { display: block; height: 100%; width: 0; background: var(--green); border-radius: 99px; transition: width .3s; }
+.count { font-size: 14px; color: var(--soft); margin-bottom: 14px; }
+form { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: clamp(18px, 4vw, 34px); margin-bottom: 48px; }
+fieldset { border: 0; padding: 0; margin: 0 0 28px; min-width: 0; display: grid; gap: 18px; }
+.js fieldset { display: none; margin: 0; }
+.js fieldset.on { display: grid; }
+legend { padding: 0; margin-bottom: 4px; }
+legend .k { display: block; font-family: var(--hand); color: var(--rose); font-size: 20px; }
+.sub { color: var(--soft); margin-top: -8px; }
+.row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.f { display: grid; gap: 6px; min-width: 0; }
+.lab { font-weight: 700; font-size: 15px; }
+.hint { font-weight: 400; color: var(--soft); font-size: 13.5px; }
+input[type=text], input[type=email], input[type=number], input[type=url], select, textarea { width: 100%; font: 16px var(--body); color: var(--ink); background: var(--paper); border: 1.5px solid var(--line); border-radius: 9px; padding: 11px 13px; }
+textarea { min-height: 110px; resize: vertical; }
+input:focus, textarea:focus, select:focus { border-color: var(--green); outline: none; }
+/* choice chips */
+.chips { display: flex; flex-wrap: wrap; gap: 9px; }
+.chip { position: relative; }
+.chip input { position: absolute; opacity: 0; inset: 0; }
+.chip span { display: inline-block; border: 1.5px solid var(--line); border-radius: 99px; padding: 8px 15px; font-weight: 600; font-size: 15px; cursor: pointer; background: var(--paper); }
+.chip input:checked + span { background: var(--green); border-color: var(--green); color: var(--green-ink); }
+.chip input:focus-visible + span { outline: 3px solid var(--rose); outline-offset: 2px; }
+/* vibe + palette cards */
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.card { position: relative; display: block; cursor: pointer; }
+.card input { position: absolute; opacity: 0; inset: 0; }
+.card .in { display: grid; gap: 8px; border: 2px solid var(--line); border-radius: 12px; padding: 12px; background: var(--paper); height: 100%; }
+.card input:checked + .in { border-color: var(--green); box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 25%, transparent); }
+.card input:checked + .in::after { content: "✓ picked"; font-family: var(--hand); color: var(--green); font-size: 17px; }
+.card input:focus-visible + .in { outline: 3px solid var(--rose); outline-offset: 2px; }
+.sw { display: flex; height: 54px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,.08); }
+.sw b { flex: 1; }
+.card h3 { font-family: var(--display); font-weight: 400; font-size: 19px; margin: 0; }
+.card p { color: var(--soft); font-size: 14.5px; line-height: 1.45; }
+.limit { font-size: 14px; color: var(--rose); min-height: 1.4em; }
+.note { background: var(--wash); border-radius: 12px; padding: 14px 16px; font-size: 15.5px; color: var(--soft); }
+.note b { color: var(--ink); }
+.free { display: grid; gap: 10px; }
+.free .f { grid-template-columns: 34px 1fr; align-items: center; }
+.free .n { font-family: var(--hand); color: var(--rose); font-size: 28px; line-height: 1; }
+.nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: var(--green-ink); font: 700 16px var(--body); padding: 13px 24px; border-radius: 10px; text-decoration: none; border: 0; cursor: pointer; }
+.btn.quiet { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+.btn[hidden] { display: none; }
+.no-js-submit { margin-top: 8px; }
+.js .no-js-submit { display: none; }
+.hp { position: absolute; left: -9999px; }
+footer { padding-block: 0 40px; color: var(--soft); font-size: 14px; text-align: center; }
+.picks { display:grid; grid-template-columns:repeat(auto-fill, minmax(256px,1fr)); gap:14px; align-items:start }
+.pk { background:var(--paper); border:2px solid var(--line); border-radius:14px; padding:10px; display:grid; gap:8px; transition:border-color .2s, opacity .2s, transform .2s }
+.pk.yes { border-color:var(--rose); box-shadow:0 0 0 3px color-mix(in srgb, var(--rose) 25%, transparent) } .pk.no { opacity:.45; transform:scale(.97) }
+.pk .em { min-height:120px; display:flex; justify-content:center } .pk .em > span { max-width:100% !important }
+.yn { display:grid; grid-template-columns:1fr 1fr; gap:8px }
+.yn button { border:1.5px solid var(--line); background:var(--paper); color:var(--ink); border-radius:99px; padding:8px 6px; font:700 14.5px var(--body); cursor:pointer }
+.pk.yes .yes { background:var(--rose); border-color:var(--rose); color:#fff } .pk.no .no { background:var(--soft); border-color:var(--soft); color:#fff }
+.grp { display:grid; gap:8px } .gl { font-family:var(--hand); color:var(--rose); font-size:19px }
+.nohead { font-family:var(--display); font-weight:400; font-size:24px; margin:8px 0 0 }
+.chips.nope .chip input:checked + span { background:#7D5A5A; border-color:#7D5A5A; color:#fff; text-decoration:line-through }
+@media (max-width: 560px) { .row, .cards { grid-template-columns: 1fr; } }
+</style></head><body>
+
+<header class="top"><div class="wrap">
+  <a class="logo" href="/"><svg width="34" height="22" viewBox="0 0 34 22" aria-hidden="true" style="flex:none"><circle cx="12" cy="11" r="8.5" fill="none" stroke="#4F6582" stroke-width="2.6"/><circle cx="22" cy="11" r="8.5" fill="none" stroke="#8DA4BE" stroke-width="2.6"/></svg>Twice Loved <span class="hand">wedding finds</span></a>
+  <a href="/" style="font-size:15px;color:var(--soft)">Back to home</a>
+</div></header>
+
+<main class="wrap">
+  <div class="intro">
+    <p class="hi">Let's dream it up together.</p>
+    <h1>Your wedding vibe quiz</h1>
+    <p>About 5 minutes. There are no wrong answers, and "we're not sure yet" is totally fine. Within a day, Hailey and I send you a <b>free vision board</b> made just for you, plus <b>your first 3 decor finds, free</b>.</p>
+  </div>
+
+  <div aria-live="polite"><div class="bar"><i id="barfill"></i></div><p class="count" id="count">Step 1 of 9</p></div>
+
+  <form id="quiz" name="vision-quiz" method="POST" action="/quiz-thanks.html" data-netlify="true" netlify-honeypot="company" novalidate>
+    <input type="hidden" name="form-name" value="vision-quiz">
+    <p class="hp"><label>Leave this empty <input name="company" tabindex="-1" autocomplete="off"></label></p>
+
+    <!-- 1 -->
+    <fieldset class="on">
+      <legend><span class="k">first, hi!</span><h2>About you two</h2></legend>
+      <div class="row">
+        <div class="f"><label class="lab" for="name">Your name</label><input type="text" id="name" name="name" required autocomplete="name"></div>
+        <div class="f"><label class="lab" for="partner">Your partner's name <span class="hint">(optional)</span></label><input type="text" id="partner" name="partner"></div>
+      </div>
+      <div class="row">
+        <div class="f"><label class="lab" for="email">Email <span class="hint">(your board goes here)</span></label><input type="email" id="email" name="email" required autocomplete="email"></div>
+        <div class="f"><label class="lab" for="date">Wedding date <span class="hint">(month + year is fine)</span></label><input type="text" id="date" name="wedding_date" placeholder="June 2027"></div>
+      </div>
+      <div class="f"><label class="lab" for="where">City and state of the wedding <span class="hint">(so we can find secondhand pieces you can pick up nearby)</span></label><input type="text" id="where" name="location" required placeholder="Columbus, OH"></div>
+    </fieldset>
+
+    <!-- 2 -->
+    <fieldset>
+      <legend><span class="k">the fun part</span><h2>Which of these feel like you?</h2></legend>
+      <p class="sub">Pick up to 3. Go with your gut.</p>
+      <div class="cards" id="vibes">
+        <label class="card"><input type="checkbox" name="vibe" value="Garden Romantic"><span class="in"><span class="sw"><b style="background:#A8B89A"></b><b style="background:#F4EFE6"></b><b style="background:#E8C4C0"></b><b style="background:#6E7F5E"></b></span><h3>Garden Romantic</h3><p>Loose greenery, soft florals, candlelight, a little wild.</p></span></label>
+        <label class="card"><input type="checkbox" name="vibe" value="Rustic Barn"><span class="in"><span class="sw"><b style="background:#8A6A4F"></b><b style="background:#EFE6D8"></b><b style="background:#B9A88D"></b><b style="background:#4E5B45"></b></span><h3>Rustic Barn</h3><p>Wood, burlap and lace, mason jars, string lights.</p></span></label>
+        <label class="card"><input type="checkbox" name="vibe" value="Boho Desert"><span class="in"><span class="sw"><b style="background:#C7865F"></b><b style="background:#F1E3D3"></b><b style="background:#D9B48F"></b><b style="background:#8C5A3C"></b></span><h3>Boho Desert</h3><p>Pampas, macramé, rugs and pillows, warm terracotta.</p></span></label>
+        <label class="card"><input type="checkbox" name="vibe" value="Modern Minimal"><span class="in"><span class="sw"><b style="background:#F7F7F5"></b><b style="background:#1F1F1F"></b><b style="background:#CFCFCB"></b><b style="background:#8E8E88"></b></span><h3>Modern Minimal</h3><p>Clean lines, lots of white space, a few bold pieces.</p></span></label>
+        <label class="card"><input type="checkbox" name="vibe" value="Classic Elegant"><span class="in"><span class="sw"><b style="background:#FFFFFF"></b><b style="background:#C9A96E"></b><b style="background:#EDE6DA"></b><b style="background:#2C2C34"></b></span><h3>Classic Elegant</h3><p>White florals, gold accents, crisp linens, timeless.</p></span></label>
+        <label class="card"><input type="checkbox" name="vibe" value="Moody Romantic"><span class="in"><span class="sw"><b style="background:#5B1F2E"></b><b style="background:#2B2230"></b><b style="background:#B07A6B"></b><b style="background:#D9C3B0"></b></span><h3>Moody Romantic</h3><p>Deep reds and plums, velvet, taper candles, drama.</p></span></label>
+        <label class="card"><input type="checkbox" name="vibe" value="Coastal Breezy"><span class="in"><span class="sw"><b style="background:#9CC3D5"></b><b style="background:#F5F1E8"></b><b style="background:#D8C7A6"></b><b style="background:#3E6A82"></b></span><h3>Coastal Breezy</h3><p>Light blues, sand, flowing fabric, airy and relaxed.</p></span></label>
+        <label class="card"><input type="checkbox" name="vibe" value="Vintage Thrifted"><span class="in"><span class="sw"><b style="background:#D7A9A0"></b><b style="background:#E9DFC9"></b><b style="background:#9AAE9C"></b><b style="background:#B58B4C"></b></span><h3>Vintage Thrifted</h3><p>Mismatched china, old frames, antiques with a story.</p></span></label>
+      </div>
+      <p class="limit" id="vibeLimit"></p>
+      <div class="f"><span class="lab">Words that fit the feeling you want</span>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="feeling" value="cozy"><span>cozy</span></label>
+          <label class="chip"><input type="checkbox" name="feeling" value="airy"><span>light &amp; airy</span></label>
+          <label class="chip"><input type="checkbox" name="feeling" value="dramatic"><span>dramatic</span></label>
+          <label class="chip"><input type="checkbox" name="feeling" value="playful"><span>fun &amp; playful</span></label>
+          <label class="chip"><input type="checkbox" name="feeling" value="timeless"><span>timeless</span></label>
+          <label class="chip"><input type="checkbox" name="feeling" value="intimate"><span>intimate</span></label>
+          <label class="chip"><input type="checkbox" name="feeling" value="earthy"><span>earthy</span></label>
+          <label class="chip"><input type="checkbox" name="feeling" value="glam"><span>glam</span></label>
+          <label class="chip"><input type="checkbox" name="feeling" value="laid-back"><span>laid-back</span></label>
+          <label class="chip"><input type="checkbox" name="feeling" value="whimsical"><span>whimsical</span></label>
+        </div>
+      </div>
+    </fieldset>
+
+
+    <!-- photos -->
+    <fieldset id="photoStep">
+      <legend><span class="k">your vision board starts here</span><h2>Love it, or not for you?</h2></legend>
+      <p class="sub">Real weddings picked for the vibes you chose. Tap the heart on the ones that feel like you, and the X on the ones that don't. This is how we learn your taste.</p>
+      <div class="picks" id="picks"></div>
+      <p class="limit" id="pickNote"></p>
+      <input type="hidden" name="loved_photos" id="loved"><input type="hidden" name="not_for_me_photos" id="nope_ph">
+    </fieldset>
+
+    <!-- 3 -->
+    <fieldset>
+      <legend><span class="k">color story</span><h2>What colors are you drawn to?</h2></legend>
+      <p class="sub">Pick 1 or 2, or tell us your own.</p>
+      <div class="cards" id="palettes">
+        <label class="card"><input type="checkbox" name="colors" value="Sage & Ivory"><span class="in"><span class="sw"><b style="background:#9CAF88"></b><b style="background:#FFFFF0"></b><b style="background:#D8DCCB"></b><b style="background:#5F6F52"></b></span><h3>Sage &amp; Ivory</h3></span></label>
+        <label class="card"><input type="checkbox" name="colors" value="Dusty Blue & Champagne"><span class="in"><span class="sw"><b style="background:#8DA4BE"></b><b style="background:#F1E6D0"></b><b style="background:#C8D3DF"></b><b style="background:#4F6582"></b></span><h3>Dusty Blue &amp; Champagne</h3></span></label>
+        <label class="card"><input type="checkbox" name="colors" value="Burgundy & Blush"><span class="in"><span class="sw"><b style="background:#6B1E2E"></b><b style="background:#F2D4CF"></b><b style="background:#A8475A"></b><b style="background:#F8EEEA"></b></span><h3>Burgundy &amp; Blush</h3></span></label>
+        <label class="card"><input type="checkbox" name="colors" value="Terracotta & Cream"><span class="in"><span class="sw"><b style="background:#C2693E"></b><b style="background:#F6EEDF"></b><b style="background:#E2A97E"></b><b style="background:#7A3E22"></b></span><h3>Terracotta &amp; Cream</h3></span></label>
+        <label class="card"><input type="checkbox" name="colors" value="Black, White & Gold"><span class="in"><span class="sw"><b style="background:#1C1C1C"></b><b style="background:#FFFFFF"></b><b style="background:#C9A54C"></b><b style="background:#E9E4D8"></b></span><h3>Black, White &amp; Gold</h3></span></label>
+        <label class="card"><input type="checkbox" name="colors" value="Lavender & Silver"><span class="in"><span class="sw"><b style="background:#B7A6D1"></b><b style="background:#E9E9EE"></b><b style="background:#C9C9D2"></b><b style="background:#6E5F8C"></b></span><h3>Lavender &amp; Silver</h3></span></label>
+        <label class="card"><input type="checkbox" name="colors" value="Emerald & Gold"><span class="in"><span class="sw"><b style="background:#1F5E46"></b><b style="background:#D4B35F"></b><b style="background:#F3EFE3"></b><b style="background:#0F3A2B"></b></span><h3>Emerald &amp; Gold</h3></span></label>
+        <label class="card"><input type="checkbox" name="colors" value="Bright & Colorful"><span class="in"><span class="sw"><b style="background:#F28C38"></b><b style="background:#F2C12E"></b><b style="background:#E2547A"></b><b style="background:#3FA7A0"></b></span><h3>Bright &amp; Colorful</h3></span></label>
+      </div>
+      <div class="f"><label class="lab" for="owncolors">Your own colors, or anything to avoid <span class="hint">(optional)</span></label><input type="text" id="owncolors" name="colors_own" placeholder="e.g. navy and rust, no pink please"></div>
+    </fieldset>
+
+    <!-- 4 -->
+    <fieldset>
+      <legend><span class="k">the big picture</span><h2>Your day</h2></legend>
+      <div class="f"><span class="lab">Venue type</span>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="venue" value="Barn or farm"><span>barn / farm</span></label>
+          <label class="chip"><input type="radio" name="venue" value="Garden or park"><span>garden / park</span></label>
+          <label class="chip"><input type="radio" name="venue" value="Church + reception hall"><span>church + hall</span></label>
+          <label class="chip"><input type="radio" name="venue" value="Beach or lake"><span>beach / lake</span></label>
+          <label class="chip"><input type="radio" name="venue" value="Backyard"><span>backyard</span></label>
+          <label class="chip"><input type="radio" name="venue" value="Ballroom or hotel"><span>ballroom / hotel</span></label>
+          <label class="chip"><input type="radio" name="venue" value="Restaurant or brewery"><span>restaurant / brewery</span></label>
+          <label class="chip"><input type="radio" name="venue" value="Still deciding"><span>still deciding</span></label>
+        </div>
+      </div>
+      <div class="f"><span class="lab">Inside or outside?</span>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="setting" value="Indoors"><span>indoors</span></label>
+          <label class="chip"><input type="radio" name="setting" value="Outdoors"><span>outdoors</span></label>
+          <label class="chip"><input type="radio" name="setting" value="Both"><span>a bit of both</span></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="f"><label class="lab" for="guests">About how many guests?</label><input type="number" id="guests" name="guests" min="2" max="1000" inputmode="numeric" placeholder="120" required></div>
+        <div class="f"><label class="lab" for="tables">Guest tables <span class="hint">(if you know)</span></label><input type="number" id="tables" name="tables" min="0" max="200" inputmode="numeric" placeholder="12"></div>
+      </div>
+      <div class="f"><span class="lab">Total wedding budget, roughly</span>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="total_budget" value="Under $10k" required><span>under $10k</span></label>
+          <label class="chip"><input type="radio" name="total_budget" value="$10k-$20k"><span>$10k–20k</span></label>
+          <label class="chip"><input type="radio" name="total_budget" value="$20k-$35k"><span>$20k–35k</span></label>
+          <label class="chip"><input type="radio" name="total_budget" value="$35k+"><span>$35k+</span></label>
+          <label class="chip"><input type="radio" name="total_budget" value="Not sure"><span>not sure yet</span></label>
+        </div>
+      </div>
+      <div class="f"><span class="lab">How much for decor? <span class="hint">(arches, centerpieces, linens, signs, lighting)</span></span>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="decor_budget" value="Under $500" required><span>under $500</span></label>
+          <label class="chip"><input type="radio" name="decor_budget" value="$500-$1,500"><span>$500–1,500</span></label>
+          <label class="chip"><input type="radio" name="decor_budget" value="$1,500-$3,000"><span>$1,500–3,000</span></label>
+          <label class="chip"><input type="radio" name="decor_budget" value="$3,000+"><span>$3,000+</span></label>
+          <label class="chip"><input type="radio" name="decor_budget" value="Help me figure it out"><span>help me figure it out</span></label>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- 5 -->
+    <fieldset>
+      <legend><span class="k">where the magic goes</span><h2>Which spots matter most to you?</h2></legend>
+      <p class="sub">Pick as many as you like.</p>
+      <div class="chips">
+        <label class="chip"><input type="checkbox" name="zones" value="Ceremony arch / backdrop"><span>ceremony arch / backdrop</span></label>
+        <label class="chip"><input type="checkbox" name="zones" value="Aisle"><span>aisle</span></label>
+        <label class="chip"><input type="checkbox" name="zones" value="Guest table centerpieces"><span>table centerpieces</span></label>
+        <label class="chip"><input type="checkbox" name="zones" value="Linens & runners"><span>linens &amp; runners</span></label>
+        <label class="chip"><input type="checkbox" name="zones" value="Head / sweetheart table"><span>head / sweetheart table</span></label>
+        <label class="chip"><input type="checkbox" name="zones" value="Welcome sign & entry"><span>welcome sign &amp; entry</span></label>
+        <label class="chip"><input type="checkbox" name="zones" value="Lighting"><span>lighting</span></label>
+        <label class="chip"><input type="checkbox" name="zones" value="Bar"><span>bar</span></label>
+        <label class="chip"><input type="checkbox" name="zones" value="Dessert / cake table"><span>dessert / cake table</span></label>
+        <label class="chip"><input type="checkbox" name="zones" value="Memory table"><span>memory table</span></label>
+        <label class="chip"><input type="checkbox" name="zones" value="Photo backdrop"><span>photo backdrop</span></label>
+        <label class="chip"><input type="checkbox" name="zones" value="Card & gift table"><span>card &amp; gift table</span></label>
+      </div>
+      <div class="f"><span class="lab">How do you feel about DIY?</span>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="diy" value="Love it"><span>love it, give me projects</span></label>
+          <label class="chip"><input type="radio" name="diy" value="A little"><span>a little is fine</span></label>
+          <label class="chip"><input type="radio" name="diy" value="None"><span>no thanks, ready-made please</span></label>
+        </div>
+      </div>
+      <div class="f"><span class="lab">Secondhand or new?</span>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="buying" value="Secondhand first"><span>secondhand first, save money</span></label>
+          <label class="chip"><input type="radio" name="buying" value="Mix"><span>a mix is great</span></label>
+          <label class="chip"><input type="radio" name="buying" value="New only"><span>new only</span></label>
+        </div>
+      </div>
+      <div class="f"><span class="lab">Can you pick things up locally?</span>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="pickup" value="Yes, within an hour"><span>yes, within an hour</span></label>
+          <label class="chip"><input type="radio" name="pickup" value="Short drives only"><span>short drives only</span></label>
+          <label class="chip"><input type="radio" name="pickup" value="Shipping only"><span>shipping only</span></label>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- 6 -->
+    <fieldset>
+      <legend><span class="k">on us</span><h2>Your 3 free finds</h2></legend>
+      <p class="sub">Name 3 pieces you want most. We'll find 2 or 3 options for each, in your budget, free.</p>
+      <div class="free">
+        <div class="f"><span class="n">1</span><input type="text" name="free_find_1" aria-label="Free find 1" placeholder="e.g. a wood arch for the ceremony" required></div>
+        <div class="f"><span class="n">2</span><input type="text" name="free_find_2" aria-label="Free find 2" placeholder="e.g. 12 sage table runners"></div>
+        <div class="f"><span class="n">3</span><input type="text" name="free_find_3" aria-label="Free find 3" placeholder="e.g. a big welcome sign"></div>
+      </div>
+      <p class="note"><b>Want everything found?</b> After you see your board, you can have us build your <b>whole to-buy list</b> for $49: every piece, 2 or 3 options each, matched to your budget.</p>
+    </fieldset>
+
+
+    <!-- fun -->
+    <fieldset>
+      <legend><span class="k">the good stuff</span><h2>What would make it feel like <em>your</em> day?</h2></legend>
+      <p class="sub">Tap everything you've pictured. No limit, and nothing here costs you anything to pick.</p>
+      <div class="grp"><p class="gl">Ceremony</p><div class="chips"><label class="chip"><input type="checkbox" name="must_haves" value="Live music for the aisle"><span>Live music for the aisle</span></label><label class="chip"><input type="checkbox" name="must_haves" value="A first look"><span>A first look</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Grandparent walking down the aisle"><span>Grandparent walking down the aisle</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Unity candle or sand ceremony"><span>Unity candle or sand ceremony</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Flower girl petals"><span>Flower girl petals</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Handfasting"><span>Handfasting</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Personal vows"><span>Personal vows</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Unplugged ceremony"><span>Unplugged ceremony</span></label></div></div><div class="grp"><p class="gl">Cocktail hour</p><div class="chips"><label class="chip"><input type="checkbox" name="must_haves" value="Lawn games"><span>Lawn games</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Mini golf"><span>Mini golf</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Signature cocktails"><span>Signature cocktails</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Oyster or raw bar"><span>Oyster or raw bar</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Cigar &amp; whiskey bar"><span>Cigar &amp; whiskey bar</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Live caricature artist"><span>Live caricature artist</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Polaroid guest book"><span>Polaroid guest book</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Grazing table"><span>Grazing table</span></label></div></div><div class="grp"><p class="gl">Reception</p><div class="chips"><label class="chip"><input type="checkbox" name="must_haves" value="Live band"><span>Live band</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Photo booth"><span>Photo booth</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Champagne tower"><span>Champagne tower</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Choreographed first dance"><span>Choreographed first dance</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Anniversary dance"><span>Anniversary dance</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Silent disco"><span>Silent disco</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Late-night karaoke"><span>Late-night karaoke</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Live painter"><span>Live painter</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Monogram on the dance floor"><span>Monogram on the dance floor</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Hanging floral installation"><span>Hanging floral installation</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Candles everywhere"><span>Candles everywhere</span></label><label class="chip"><input type="checkbox" name="must_haves" value="String lights overhead"><span>String lights overhead</span></label></div></div><div class="grp"><p class="gl">Food &amp; sweets</p><div class="chips"><label class="chip"><input type="checkbox" name="must_haves" value="Donut wall"><span>Donut wall</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Late-night food truck"><span>Late-night food truck</span></label><label class="chip"><input type="checkbox" name="must_haves" value="S&#x27;mores bar"><span>S&#x27;mores bar</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Ice cream truck"><span>Ice cream truck</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Taco bar"><span>Taco bar</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Espresso martini bar"><span>Espresso martini bar</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Dessert table instead of a big cake"><span>Dessert table instead of a big cake</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Family recipe on the menu"><span>Family recipe on the menu</span></label></div></div><div class="grp"><p class="gl">Send-off &amp; extras</p><div class="chips"><label class="chip"><input type="checkbox" name="must_haves" value="Sparkler send-off"><span>Sparkler send-off</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Bubble send-off"><span>Bubble send-off</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Vintage getaway car"><span>Vintage getaway car</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Fireworks"><span>Fireworks</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Welcome bags for guests"><span>Welcome bags for guests</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Our dog in the wedding"><span>Our dog in the wedding</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Bonfire after party"><span>Bonfire after party</span></label><label class="chip"><input type="checkbox" name="must_haves" value="Memory table for loved ones"><span>Memory table for loved ones</span></label></div></div>
+      <div class="f"><label class="lab" for="must">Something else you've always pictured? <span class="hint">(optional)</span></label><input type="text" id="must" name="must_haves_other" placeholder="e.g. my grandma's cake recipe, a canoe exit"></div>
+      <h3 class="nohead">Absolutely not</h3>
+      <p class="sub" style="margin-top:-10px">We'll keep these off your board.</p>
+      <div class="chips nope"><label class="chip"><input type="checkbox" name="absolutely_not" value="Burlap"><span>Burlap</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Mason jars"><span>Mason jars</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Glitter"><span>Glitter</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Balloons"><span>Balloons</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Neon signs"><span>Neon signs</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Chalkboard signs"><span>Chalkboard signs</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Pampas grass"><span>Pampas grass</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Fake flowers"><span>Fake flowers</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Chair covers"><span>Chair covers</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Everything matching"><span>Everything matching</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Cash bar"><span>Cash bar</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Bouquet toss"><span>Bouquet toss</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Garter toss"><span>Garter toss</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Money dance"><span>Money dance</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Cake smash"><span>Cake smash</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Long speeches"><span>Long speeches</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Group line dances"><span>Group line dances</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Receiving line"><span>Receiving line</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Confetti or rice toss"><span>Confetti or rice toss</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Sparklers"><span>Sparklers</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Kids at the reception"><span>Kids at the reception</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Assigned seats"><span>Assigned seats</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Formal sit-down dinner"><span>Formal sit-down dinner</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Big church-style ceremony"><span>Big church-style ceremony</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Too much pink"><span>Too much pink</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Anything gold"><span>Anything gold</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Anything rustic"><span>Anything rustic</span></label><label class="chip"><input type="checkbox" name="absolutely_not" value="Anything too formal"><span>Anything too formal</span></label></div>
+      <div class="f"><label class="lab" for="nope">Anything else to avoid? <span class="hint">(optional)</span></label><input type="text" id="nope" name="absolutely_not_other"></div>
+    </fieldset>
+
+    <!-- 7 -->
+    <fieldset>
+      <legend><span class="k">last one</span><h2>Tell us about you two</h2></legend>
+      <div class="f"><label class="lab" for="story">How did you meet, and what should your wedding feel like?</label><textarea id="story" name="story" placeholder="We met at a bonfire, so we want it warm and relaxed, lots of candles, people staying up late..."></textarea></div>
+      <input type="hidden" name="first_look_link" id="firstLook">
+      <div class="f"><label class="lab" for="pin">Pinterest board link <span class="hint">(optional, but we love these)</span></label><input type="url" id="pin" name="pinterest" placeholder="https://pinterest.com/..."></div>
+      <div class="f"><label class="lab" for="heard">How did you find us? <span class="hint">(optional)</span></label><input type="text" id="heard" name="heard_from"></div>
+      <button class="btn no-js-submit" type="submit">Send my answers</button>
+    </fieldset>
+
+    <div class="nav">
+      <button class="btn quiet" type="button" id="back" hidden>Back</button>
+      <button class="btn" type="button" id="next" style="margin-left:auto">Next</button>
+      <button class="btn" type="submit" id="send" hidden style="margin-left:auto">Send it, make my board!</button>
+    </div>
+  </form>
+</main>
+<footer>Questions? Just reply to our email. We read every one. · <a href="/">twicelovedweddings.com</a></footer>
+
+<script>
+(function () {
+  var form = document.getElementById('quiz');
+  document.documentElement.classList.add('js');
+  var steps = Array.prototype.slice.call(form.querySelectorAll('fieldset'));
+  var i = 0, back = document.getElementById('back'), next = document.getElementById('next'), send = document.getElementById('send');
+  function show(n) {
+    steps.forEach(function (s, k) { s.classList.toggle('on', k === n); });
+    i = n;
+    back.hidden = n === 0; next.hidden = n === steps.length - 1; send.hidden = n !== steps.length - 1;
+    document.getElementById('barfill').style.width = Math.round((n + 1) / steps.length * 100) + '%';
+    document.getElementById('count').textContent = 'Step ' + (n + 1) + ' of ' + steps.length;
+  }
+  function valid(n) {
+    var ok = true, seen = {};
+    steps[n].querySelectorAll('[required]').forEach(function (el) {
+      if (!ok) return;
+      if (el.type === 'radio') {
+        if (seen[el.name]) return; seen[el.name] = 1;
+        if (!form.querySelector('input[name="' + el.name + '"]:checked')) { ok = false; el.closest('.f').querySelector('.lab').scrollIntoView({ block: 'center', behavior: 'smooth' }); el.focus(); }
+      } else if (!el.checkValidity()) { ok = false; el.reportValidity(); }
+    });
+    return ok;
+  }
+  var POOL = {"Garden Romantic": ["18155204744898617", "18155204744883921", "422281212936662", "281543726953590", "823173638184947362", "4855512095078890"], "Rustic Barn": ["262616222020100020", "262616222020055590", "262616222019963612", "262616222019950600", "262616222019945616", "262616222020019115"], "Boho Desert": ["219198706855675935", "219198706855685822", "219198706855680948", "219198706855675989"], "Modern Minimal": ["602778731423141077", "602778731422945857", "602778731422862618", "602778731422782536", "602778731422770156"], "Classic Elegant": ["95279348360320563", "95279348360313611", "95279348360248170", "95279348360204135", "95279348360153321"], "Moody Romantic": ["279223245644210620", "279223245644201480", "279223245644226705", "279223245644243779"], "Coastal Breezy": ["91620173667488160", "91620173667479696", "91620173667430384", "91620173667413271", "91620173667392493", "91620173665616686", "1026398571351028019"], "Vintage Thrifted": ["705798572893135001", "705798572893117228", "705798572893109430", "279223245644209474"]};
+  var built = '';
+  function buildPicks() {
+    var vibes = [].map.call(form.querySelectorAll('input[name="vibe"]:checked'), function (b) { return b.value; });
+    if (!vibes.length) vibes = Object.keys(POOL);
+    var key = vibes.join('|'); if (key === built) return; built = key;
+    var per = vibes.length === 1 ? 6 : vibes.length === 2 ? 4 : 3, list = [];
+    vibes.forEach(function (v) { (POOL[v] || []).slice(0, per).forEach(function (id) { list.push([v, id]); }); });
+    if (vibes.length === Object.keys(POOL).length) list = list.filter(function (x, k) { return k % 2 === 0; }).slice(0, 9);
+    var box = document.getElementById('picks'); box.innerHTML = '';
+    list.forEach(function (x) {
+      var d = document.createElement('div'); d.className = 'pk'; d.dataset.pin = x[1]; d.dataset.vibe = x[0];
+      d.innerHTML = '<div class="em"><a data-pin-do="embedPin" data-pin-width="small" data-pin-terse="true" href="https://www.pinterest.com/pin/' + x[1] + '/"></a></div><div class="yn"><button type="button" class="no">&#10005; Not me</button><button type="button" class="yes">&#9825; Love it</button></div>';
+      d.querySelector('.yes').onclick = function () { d.classList.toggle('yes'); d.classList.remove('no'); tally(); };
+      d.querySelector('.no').onclick = function () { d.classList.toggle('no'); d.classList.remove('yes'); tally(); };
+      box.appendChild(d);
+    });
+    if (window.PinUtils && PinUtils.build) PinUtils.build(); else { var sc = document.createElement('script'); sc.async = true; sc.src = 'https://assets.pinterest.com/js/pinit.js'; document.body.appendChild(sc); }
+    tally();
+  }
+  function tally() {
+    var y = [].map.call(document.querySelectorAll('.pk.yes'), function (d) { return d.dataset.pin; });
+    var n = [].map.call(document.querySelectorAll('.pk.no'), function (d) { return d.dataset.pin; });
+    document.getElementById('loved').value = y.map(function (id) { return 'https://www.pinterest.com/pin/' + id + '/'; }).join(' ');
+    document.getElementById('nope_ph').value = n.map(function (id) { return 'https://www.pinterest.com/pin/' + id + '/'; }).join(' ');
+    document.getElementById('pickNote').textContent = y.length ? y.length + ' loved so far' + (y.length >= 3 ? '. Beautiful taste!' : '. Pick a few more if you can.') : '';
+  }
+  function vals(n) { return [].map.call(form.querySelectorAll('input[name="' + n + '"]:checked'), function (b) { return b.value; }); }
+  function v1(n) { var el = form.querySelector('[name="' + n + '"]'); return el ? (el.type === 'radio' ? ((form.querySelector('[name="' + n + '"]:checked') || {}).value || '') : el.value) : ''; }
+  function snapshot() {
+    var data = { n: v1('name'), pn: v1('partner'), d: v1('wedding_date'), l: v1('location'), v: vals('vibe'), f: vals('feeling'), c: vals('colors'),
+      p: [].map.call(document.querySelectorAll('.pk.yes'), function (d) { return d.dataset.pin; }), m: vals('must_haves'), x: vals('absolutely_not'),
+      z: vals('zones'), g: v1('guests'), tb: v1('total_budget'), db: v1('decor_budget'), ff: [v1('free_find_1'), v1('free_find_2'), v1('free_find_3')].filter(Boolean) };
+    var enc = btoa(unescape(encodeURIComponent(JSON.stringify(data)))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    document.getElementById('firstLook').value = location.origin + '/quiz-thanks.html#b=' + enc;
+    try { sessionStorage.setItem('tl_first_look', enc); } catch (e) {}
+  }
+  next.addEventListener('click', function () { if (valid(i)) { show(i + 1); if (steps[i].id === 'photoStep') buildPicks(); form.scrollIntoView({ behavior: 'smooth' }); } });
+  back.addEventListener('click', function () { show(i - 1); if (steps[i].id === 'photoStep') buildPicks(); form.scrollIntoView({ behavior: 'smooth' }); });
+  form.addEventListener('submit', function (e) { if (!valid(i)) { e.preventDefault(); return; } snapshot(); });
+  form.addEventListener('keydown', function (e) { if (e.key === 'Enter' && e.target.tagName === 'INPUT' && i < steps.length - 1) { e.preventDefault(); next.click(); } });
+  function cap(id, max, msgEl) {
+    var boxes = document.querySelectorAll('#' + id + ' input');
+    boxes.forEach(function (b) { b.addEventListener('change', function () {
+      var on = document.querySelectorAll('#' + id + ' input:checked').length;
+      if (on > max) { b.checked = false; if (msgEl) msgEl.textContent = 'Just ' + max + ' for now. Unpick one to swap.'; }
+      else if (msgEl) msgEl.textContent = '';
+    }); });
+  }
+  cap('vibes', 3, document.getElementById('vibeLimit'));
+  show(0);
+})();
+</script>
+</body></html>

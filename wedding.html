@@ -1,0 +1,197 @@
+<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Build Your Wedding Vision | Twice Loved</title>
+<meta name="description" content="Tell us the wedding you've been dreaming of. We'll turn it into a beautiful vision and a plan you can actually afford.">
+<link rel="canonical" href="https://twicelovedweddings.com/wedding.html">
+<meta property="og:title" content="Build your wedding vision | Twice Loved"><meta property="og:description" content="Tell us the wedding you've been dreaming of. We'll help you bring it to life, beautifully and within your budget."><meta property="og:image" content="https://twicelovedweddings.com/og.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Kalam&family=Pinyon+Script&display=swap">
+<link rel="stylesheet" href="css/tl.css">
+<style>
+body { background:var(--wash) }
+.stage { min-height:100vh; display:flex; flex-direction:column }
+.bar { position:sticky; top:0; z-index:5; background:rgba(238,243,248,.92); backdrop-filter:blur(6px); padding:12px 0 }
+.bar .wrap { display:flex; align-items:center; gap:16px }
+.prog { flex:1; height:6px; background:var(--line); border-radius:9px; overflow:hidden } .prog i { display:block; height:100%; width:0; background:var(--blue); transition:width .4s }
+.chapter { font-size:13px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--soft); white-space:nowrap }
+.screen { display:none; padding:34px 0 120px } .screen.on { display:block; animation:rin .5s ease both }
+.screen h2 { margin-top:6px } .screen .lead { color:var(--soft); margin:10px 0 24px; font-size:18px; max-width:38em }
+.box { background:#fff; border:1px solid var(--line); border-radius:20px; padding:clamp(18px,4vw,32px); display:grid; gap:20px }
+.reflect { background:#fff; border-left:4px solid var(--blue2); border-radius:12px; padding:12px 16px; font-family:var(--hand); color:var(--blue); font-size:18px; margin-bottom:18px }
+.reflect:empty { display:none }
+.words { display:grid; gap:6px } .words label { font-weight:700; font-size:15px }
+.nav { position:fixed; left:0; right:0; bottom:0; background:rgba(255,255,255,.95); border-top:1px solid var(--line); padding:12px 0; z-index:6 }
+.nav .narrow { display:flex; justify-content:space-between; gap:10px; align-items:center }
+.intro { text-align:center; padding:clamp(40px,10vh,110px) 0 }
+.intro h1 { font-size:clamp(40px,7vw,72px) } .intro p { color:var(--soft); font-size:19px; max-width:34em; margin:18px auto 30px }
+.qv { display:grid; gap:12px } .qv button { text-align:left; background:#fff; border:2px solid var(--line); border-radius:16px; padding:18px 20px; font:600 18px var(--body); color:var(--ink); cursor:pointer; display:flex; gap:14px; align-items:center }
+.qv button:hover { border-color:var(--blue2) } .qv .dots { display:flex; gap:4px; flex:none } .qv .dots b { width:18px; height:18px; border-radius:50%; border:1px solid rgba(0,0,0,.08) }
+.custom { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px }
+.custom label { display:grid; gap:6px; font-weight:700; font-size:14px } .custom .cp { display:flex; gap:8px; align-items:center }
+.custom input[type=color] { width:44px; height:40px; border:1px solid var(--line); border-radius:8px; background:#fff; padding:2px }
+.dna { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px }
+.dna div { background:var(--wash); border-radius:12px; padding:12px 14px } .dna b { display:block; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--soft) }
+.err { color:#9A3B3B; font-size:14.5px; min-height:1.2em }
+.skip { background:none; border:0; color:var(--soft); text-decoration:underline; cursor:pointer; font:600 15px var(--body) }
+</style></head><body>
+<div class="stage">
+<div class="bar" id="bar" hidden><div class="wrap"><a class="logo" href="/" aria-label="Twice Loved home"><svg width="34" height="22" viewBox="0 0 34 22" aria-hidden="true"><circle cx="12" cy="11" r="8.5" fill="none" stroke="#4F6582" stroke-width="2.6"/><circle cx="22" cy="11" r="8.5" fill="none" stroke="#8DA4BE" stroke-width="2.6"/></svg></a><div class="prog"><i id="pf"></i></div><span class="chapter" id="chap"></span></div></div>
+
+<main class="narrow">
+<!-- 0 intro -->
+<section class="screen on intro" data-chap="">
+  <a class="logo" href="/" style="justify-content:center;margin-bottom:26px"><svg width="40" height="26" viewBox="0 0 34 22" aria-hidden="true"><circle cx="12" cy="11" r="8.5" fill="none" stroke="#4F6582" stroke-width="2.6"/><circle cx="22" cy="11" r="8.5" fill="none" stroke="#8DA4BE" stroke-width="2.6"/></svg>Twice Loved <span class="hand">wedding finds</span></a>
+  <h1>Let's bring your wedding vision to life.</h1>
+  <p>You've probably pictured this day in a hundred little ways: the feeling, the colors, the candles, the tables and all of the little details. Tell us what you've been dreaming about, and we'll help turn it into a wedding you can actually create.</p>
+  <button class="btn big" type="button" data-go="1">Begin our story</button>
+  <p style="font-size:15px;margin-top:16px">About 8 minutes · free · nothing to sign up for</p>
+</section>
+
+<!-- 1 their day -->
+<section class="screen" data-chap="Your day">
+  <p class="kick">chapter one</p><h2>First, tell us about your day.</h2><p class="lead">The practical bits, so everything we suggest fits your date, your place and your budget.</p>
+  <div class="box">
+    <div class="row2"><div class="field"><label class="lab" for="n1">Your name</label><input type="text" id="n1" autocomplete="given-name" required></div><div class="field"><label class="lab" for="n2">Your partner's name</label><input type="text" id="n2"></div></div>
+    <div class="row2"><div class="field"><label class="lab" for="em">Email <span class="hint">(we'll send your vision here)</span></label><input type="email" id="em" autocomplete="email" required></div><div class="field"><label class="lab" for="dt">Wedding date <span class="hint">(a guess is fine)</span></label><input type="date" id="dt"></div></div>
+    <div class="row3"><div class="field"><label class="lab" for="loc">City and state</label><input type="text" id="loc" placeholder="New Haven, CT" required></div><div class="field"><label class="lab" for="zip">ZIP code</label><input type="text" id="zip" inputmode="numeric" maxlength="10" placeholder="06510"></div>
+      <div class="field"><label class="lab" for="rad">How far would you drive for a great find?</label><select id="rad"><option value="10">10 miles</option><option value="25" selected>25 miles</option><option value="50">50 miles</option><option value="100">100 miles</option><option value="0">Shipping only</option></select></div></div>
+    <div class="field"><label class="lab" for="ven">Venue <span class="hint">(if you know it)</span></label><input type="text" id="ven" placeholder="e.g. Lakeside Inn"></div>
+    <div class="row3"><div class="field"><label class="lab" for="gu">About how many guests?</label><input type="number" id="gu" min="2" max="1000" inputmode="numeric" placeholder="120" required></div>
+      <div class="field"><label class="lab" for="db">Decor budget <span class="hint">($)</span></label><input type="number" id="db" min="0" step="50" inputmode="numeric" placeholder="3000" required></div>
+      <div class="field"><label class="lab" for="sp">Already spent on decor <span class="hint">($, optional)</span></label><input type="number" id="sp" min="0" step="25" inputmode="numeric" placeholder="0"></div></div>
+    <div class="field"><label class="lab" for="tb">Whole wedding budget <span class="hint">(optional, helps us read the room)</span></label><input type="number" id="tb" min="0" step="500" inputmode="numeric" placeholder="20000"></div>
+    <div class="field"><span class="lab">Does your venue already provide any of these?</span><div class="chips" id="vp"></div></div>
+    <p class="err" id="e1"></p>
+  </div>
+</section>
+
+<!-- 2 quick visions -->
+<section class="screen" data-chap="Discover">
+  <p class="kick">a little game</p><h2>Which one feels more like your wedding?</h2><p class="lead">Don't overthink it. Go with your heart. Already know your style? <button class="skip" type="button" data-go="3">Skip this</button></p>
+  <div class="qv" id="qv"></div>
+</section>
+
+<!-- 3 feeling -->
+<section class="screen" data-chap="The feeling">
+  <p class="kick">chapter two</p><h2>When you picture your wedding day, what does it feel like?</h2><p class="lead">Pick as many as feel true.</p>
+  <div class="reflect" data-reflect></div>
+  <div class="box"><div class="chips" id="feel"></div><div class="words"><label for="w_feel">Or say it in your own words</label><input type="text" id="w_feel" placeholder="like a warm summer night with everyone we love"></div></div>
+</section>
+
+<!-- 4 setting -->
+<section class="screen" data-chap="The setting">
+  <p class="kick">chapter three</p><h2>Where does your love story come to life?</h2><p class="lead">Pick the one closest to your venue, or a couple if you're still deciding.</p>
+  <div class="reflect" data-reflect></div>
+  <div class="cards" id="set"></div>
+</section>
+
+<!-- 5 colors -->
+<section class="screen" data-chap="Color story">
+  <p class="kick">chapter four</p><h2>What colors do you see woven through your day?</h2><p class="lead">Choose a color story, then make it yours.</p>
+  <div class="reflect" data-reflect></div>
+  <div class="box"><div class="cards" id="pal"></div>
+    <details><summary style="cursor:pointer;font-weight:700">Make it exactly yours (custom colors)</summary><div class="custom" id="custom" style="margin-top:14px"></div></details></div>
+</section>
+
+<!-- 6-10 the day -->
+<section class="screen" data-chap="Guests arrive" data-day="arrive"></section>
+<section class="screen" data-chap="The ceremony" data-day="ceremony"></section>
+<section class="screen" data-chap="Cocktail hour" data-day="cocktail"></section>
+<section class="screen" data-chap="The reception" data-day="reception"></section>
+<section class="screen" data-chap="The details" data-day="details"></section>
+
+<!-- 11 not you -->
+<section class="screen" data-chap="Not you">
+  <p class="kick">just as important</p><h2>What doesn't feel like you?</h2><p class="lead">We'll keep these out of everything we suggest.</p>
+  <div class="box"><div class="chips" id="no"></div><div class="words"><label for="w_no">Anything else to avoid?</label><input type="text" id="w_no" placeholder="nothing too matchy, no pink"></div></div>
+</section>
+
+<!-- 12 review -->
+<section class="screen" data-chap="Your Wedding DNA">
+  <p class="kick">we hear you</p><h2>Here's what you've shared with us.</h2>
+  <p class="lead" id="story"></p>
+  <div class="box"><div class="dna" id="dna"></div><p class="soft" style="font-size:15px">Something not right? Go back and change it. Your answers are saved as you go.</p></div>
+  <form name="wedding-dna" method="POST" data-netlify="true" netlify-honeypot="company" id="dnaForm" hidden>
+    <input type="hidden" name="form-name" value="wedding-dna"><input name="company"><input name="name"><input name="partner"><input name="email"><input name="wedding_date"><input name="location"><input name="zip"><input name="radius"><input name="venue"><input name="guests"><input name="decor_budget"><textarea name="summary"></textarea><textarea name="dna_json"></textarea><input name="reveal_link">
+  </form>
+</section>
+</main>
+
+<div class="nav" id="nav" hidden><div class="narrow"><button class="btn ghost" type="button" id="back">Back</button><span class="err" id="navErr"></span><button class="btn" type="button" id="next">Continue</button></div></div>
+</div>
+
+<script src="js/tl-engine.js"></script>
+<script>
+(function () {
+  var TL = window.TL, $ = function (id) { return document.getElementById(id); };
+  var screens = [].slice.call(document.querySelectorAll('.screen')), cur = 0, A = TL.load('tl_answers') || {}, quickPath = [];
+  function chip(name, val, type, cls) { return '<label class="chip' + (cls ? ' ' + cls : '') + '"><input type="' + (type || 'checkbox') + '" name="' + name + '" value="' + val.replace(/"/g, '&quot;') + '"><span>' + val + '</span></label>'; }
+  // render option lists
+  $('vp').innerHTML = ['Tables + chairs', 'Linens', 'Plates + flatware', 'Glassware', 'Centerpieces', 'Lighting', 'Arch or arbor', 'Candles'].map(function (v) { return chip('vp', v); }).join('');
+  $('feel').innerHTML = TL.FEELINGS.map(function (v) { return chip('feel', v); }).join('');
+  $('set').innerHTML = TL.SETTINGS.map(function (s) { return '<label class="card"><input type="checkbox" name="set" value="' + s[0] + '"><span class="in"><h4>' + s[0] + '</h4><p>' + s[1] + '</p></span></label>'; }).join('');
+  $('pal').innerHTML = TL.PALETTES.map(function (p) { return '<label class="card"><input type="radio" name="pal" value="' + p.id + '"><span class="in"><span class="sw"><b style="background:' + p.main[1] + '"></b><b style="background:' + p.second[1] + '"></b><b style="background:' + p.neutral[1] + '"></b><b style="background:' + p.metal[1] + '"></b></span><h4>' + p.name + '</h4></span></label>'; }).join('');
+  $('custom').innerHTML = [['main', 'Main color'], ['second', 'Second color'], ['neutral', 'Neutral'], ['metal', 'Metallic / accent']].map(function (c) { return '<label>' + c[1] + '<span class="cp"><input type="color" id="c_' + c[0] + '"><input type="text" id="cn_' + c[0] + '" placeholder="name it"></span></label>'; }).join('');
+  $('no').innerHTML = TL.DISLIKES.map(function (v) { return chip('no', v, 'checkbox', 'no'); }).join('');
+  document.querySelectorAll('[data-day]').forEach(function (s) { var k = s.dataset.day, D = TL.DAY[k];
+    s.innerHTML = '<p class="kick">walk through your day</p><h2>' + D.q + '</h2><p class="lead">Tap everything you can see. Leave anything you don’t need.</p><div class="reflect" data-reflect></div><div class="box"><div class="chips">' + D.o.map(function (v) { return chip('day_' + k, v); }).join('') + '</div>' +
+      (k === 'reception' ? '<div class="field"><span class="lab">Guests per table</span><div class="chips">' + ['6', '8', '10', '12'].map(function (v) { return chip('per', v, 'radio'); }).join('') + '</div></div>' : '') +
+      '<div class="words"><label for="w_' + k + '">In your own words</label><input type="text" id="w_' + k + '" placeholder="anything we missed"></div></div>'; });
+  // palette fills custom pickers
+  document.querySelectorAll('input[name=pal]').forEach(function (r) { r.addEventListener('change', function () { var p = TL.PALETTES.filter(function (x) { return x.id === r.value; })[0]; ['main', 'second', 'neutral', 'metal'].forEach(function (k) { $('c_' + k).value = p[k][1].length === 7 ? p[k][1] : '#ffffff'; $('cn_' + k).value = p[k][0]; }); }); });
+  // quick visions
+  function renderQV(round, opts) { $('qv').innerHTML = opts.map(function (o, i) { var p = TL.PALETTES.filter(function (x) { return x.id === o.pal; })[0]; return '<button type="button" data-i="' + i + '">' + (p ? '<span class="dots"><b style="background:' + p.main[1] + '"></b><b style="background:' + p.second[1] + '"></b><b style="background:' + p.metal[1] + '"></b></span>' : '') + o.t + '</button>'; }).join('');
+    [].forEach.call($('qv').querySelectorAll('button'), function (b) { b.onclick = function () { var o = opts[+b.dataset.i]; quickPath.push(o); if (round === 0) { var key = o.tags.indexOf('coastal') > -1 ? 'coastal' : o.tags.indexOf('garden') > -1 ? 'garden' : 'formal'; if (o.pal) { var r = document.querySelector('input[name=pal][value="' + o.pal + '"]'); if (r) { r.checked = true; r.dispatchEvent(new Event('change')); } } renderQV(1, TL.QUICK[1][key]); } else { go(3); } }; }); }
+  renderQV(0, TL.QUICK[0]);
+  // collect
+  function vals(n) { return [].map.call(document.querySelectorAll('input[name="' + n + '"]:checked'), function (x) { return x.value; }); }
+  function collect() {
+    var day = {}; Object.keys(TL.DAY).forEach(function (k) { day[k] = vals('day_' + k); });
+    var colors = null; if ($('cn_main').value) colors = { main: [$('cn_main').value, $('c_main').value], second: [$('cn_second').value || 'Ivory', $('c_second').value], neutral: [$('cn_neutral').value || 'White', $('c_neutral').value], metal: [$('cn_metal').value || 'Silver', $('c_metal').value] };
+    var words = {}; ['feel', 'no'].concat(Object.keys(TL.DAY)).forEach(function (k) { var el = $('w_' + k); if (el && el.value.trim()) words[k] = el.value.trim(); });
+    var qt = []; quickPath.forEach(function (o) { qt = qt.concat(o.tags); });
+    A = { name1: $('n1').value.trim(), name2: $('n2').value.trim(), email: $('em').value.trim(), date: $('dt').value, location: $('loc').value.trim(), zip: $('zip').value.trim(), radius: $('rad').value, venue: $('ven').value.trim(),
+      guests: $('gu').value, decorBudget: $('db').value, spent: $('sp').value, totalBudget: $('tb').value, venueProvides: vals('vp'), feelings: vals('feel'), settings: vals('set'), palette: (vals('pal')[0] || ''), colors: colors,
+      day: day, perTable: vals('per')[0] || 8, tableShape: day.reception.indexOf('Long tables') > -1 ? 'long' : day.reception.indexOf('Round tables') > -1 ? 'round' : '', dislikes: vals('no'), dislikeText: (words.no || ''), words: words, quickTags: qt, quick: quickPath.map(function (o) { return o.t; }) };
+    TL.save('tl_answers', A); return A;
+  }
+  function restore() { if (!A || !A.email && !A.name1) return; var set = function (id, v) { if (v != null && $(id)) $(id).value = v; };
+    set('n1', A.name1); set('n2', A.name2); set('em', A.email); set('dt', A.date); set('loc', A.location); set('zip', A.zip); set('rad', A.radius); set('ven', A.venue); set('gu', A.guests); set('db', A.decorBudget); set('sp', A.spent); set('tb', A.totalBudget);
+    var tick = function (n, arr) { (arr || []).forEach(function (v) { var el = document.querySelector('input[name="' + n + '"][value="' + String(v).replace(/"/g, '\\"') + '"]'); if (el) el.checked = true; }); };
+    tick('vp', A.venueProvides); tick('feel', A.feelings); tick('set', A.settings); tick('pal', [A.palette]); tick('no', A.dislikes); tick('per', [A.perTable]); Object.keys(A.day || {}).forEach(function (k) { tick('day_' + k, A.day[k]); });
+    Object.keys(A.words || {}).forEach(function (k) { set('w_' + k, A.words[k]); }); if (A.colors) ['main', 'second', 'neutral', 'metal'].forEach(function (k) { set('c_' + k, A.colors[k][1]); set('cn_' + k, A.colors[k][0]); }); }
+  restore();
+  // validation
+  function check(n) { var s = screens[n], msg = '';
+    if (n === 1) { if (!$('n1').value.trim()) msg = 'What should we call you?'; else if (!/^\S+@\S+\.\S+$/.test($('em').value)) msg = 'We need an email to send your vision.'; else if (!$('loc').value.trim()) msg = 'Where is the wedding? A city is enough.'; else if (!(+$('gu').value > 0)) msg = 'About how many guests?'; else if (!(+$('db').value > 0)) msg = 'Roughly what can you spend on decor? A guess is fine.'; }
+    if (n === 3 && !vals('feel').length && !$('w_feel').value.trim()) msg = 'Pick at least one feeling, or tell us in your own words.';
+    if (n === 5 && !vals('pal').length && !$('cn_main').value) msg = 'Choose a color story, or make your own.';
+    $('navErr').textContent = msg; return !msg; }
+  function go(n) { if (n > cur && !check(cur)) return; collect(); cur = Math.max(0, Math.min(n, screens.length - 1));
+    screens.forEach(function (s, i) { s.classList.toggle('on', i === cur); });
+    var started = cur > 0; $('bar').hidden = !started; $('nav').hidden = !started || cur === 2; $('pf').style.width = Math.round(cur / (screens.length - 1) * 100) + '%'; $('chap').textContent = screens[cur].dataset.chap || '';
+    $('back').style.visibility = cur > 1 ? 'visible' : 'hidden'; $('next').textContent = cur === screens.length - 1 ? 'See my wedding' : 'Continue';
+    var d = TL.buildDNA(A); var r = TL.reflect(d); document.querySelectorAll('[data-reflect]').forEach(function (el) { el.textContent = r; });
+    if (cur === screens.length - 1) review(d); window.scrollTo(0, 0); }
+  document.querySelectorAll('[data-go]').forEach(function (b) { b.onclick = function () { go(+b.dataset.go); }; });
+  $('back').onclick = function () { go(cur === 3 ? 2 : cur - 1); };
+  $('next').onclick = function () { if (cur === screens.length - 1) finish(); else go(cur + 1); };
+  function review(d) {
+    $('story').textContent = TL.narrative(d);
+    var rows = [['Names', d.names.filter(Boolean).join(' & ')], ['Date', d.date ? new Date(d.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) + (d.season ? ' · ' + d.season : '') : 'Not set yet'], ['Where', d.location + (d.zip ? ' ' + d.zip : '')],
+      ['Setting', d.settings.join(', ') || '—'], ['Colors', d.paletteName], ['Mood', d.feelings.slice(0, 4).join(', ') || '—'], ['Formality', d.formality], ['Guests', d.guests + ' · about ' + TL.qty(d).tables + ' tables'],
+      ['Decor budget', TL.money(d.budget.decor) + (d.budget.spent ? ' (' + TL.money(d.budget.spent) + ' spent)' : '')], ['Avoid', d.dislikes.join(', ') || (d.dislikeText || 'Nothing yet')]];
+    $('dna').innerHTML = rows.map(function (r) { var x = document.createElement('div'); x.innerHTML = '<b></b><span></span>'; x.children[0].textContent = r[0]; x.children[1].textContent = r[1]; return x.outerHTML; }).join(''); }
+  function finish() {
+    var d = TL.buildDNA(collect()); TL.save('tl_dna', d); var enc = TL.enc(A); var link = location.origin + '/reveal.html#a=' + enc;
+    var f = $('dnaForm'); var put = function (n, v) { f.elements[n].value = v || ''; };
+    put('name', A.name1); put('partner', A.name2); put('email', A.email); put('wedding_date', A.date); put('location', A.location); put('zip', A.zip); put('radius', A.radius); put('venue', A.venue); put('guests', A.guests); put('decor_budget', A.decorBudget);
+    put('summary', TL.narrative(d) + '\nColors: ' + d.paletteName + '\nSetting: ' + d.settings.join(', ') + '\nMood: ' + d.feelings.join(', ') + '\nFormality: ' + d.formality + '\nAvoid: ' + d.dislikes.join(', ') + ' ' + d.dislikeText + '\nWeeks to go: ' + (d.weeks == null ? '?' : d.weeks));
+    put('dna_json', JSON.stringify(A)); put('reveal_link', link);
+    $('next').disabled = true; $('next').textContent = 'Bringing it to life…';
+    var done = function () { location.href = 'reveal.html#a=' + enc; };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(f)).toString() }).then(done, done);
+  }
+})();
+</script>
+</body></html>

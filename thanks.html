@@ -1,0 +1,166 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Thanks! | Twice Loved</title><meta name="description" content="Thanks for sending your wishlist."><link rel="canonical" href="https://twicelovedweddings.com/thanks.html">
+<meta property="og:title" content="Thanks! | Twice Loved"><meta property="og:description" content="Thanks for sending your wishlist."><meta property="og:image" content="https://twicelovedweddings.com/og.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Kalam:wght@400;700&display=swap">
+<style>
+/* Layout: a personal letter from a newlywed couple. Wide hero with a handwritten wishlist card, a "meet us" note with a photo, then a loose grid of the decor we hunt for, steps, fees, and the wishlist form. */
+:root {
+  --paper: #FFFFFF;
+  --wash: #EEF3F8;
+  --ink: #26303D;
+  --soft: #5E6B7C;
+  --line: #D8E1EC;
+  --green: #4F6582;
+  --green-ink: #FFFFFF;
+  --rose: #6F8BAE;
+  --card: #FFFFFF;
+  --tape: rgba(141,164,190,.32);
+  --display: "Young Serif", Georgia, serif;
+  --body: "Nunito Sans", "Segoe UI", system-ui, sans-serif;
+  --hand: "Kalam", "Comic Sans MS", cursive;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #141922; --wash: #1B222D; --ink: #E9EEF5; --soft: #A9B5C6; --line: #2D3746;
+    --green: #9FB6D3; --green-ink: #121B28; --rose: #B9CAE0; --card: #212937; --tape: rgba(159,182,211,.3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #141922; --wash: #1B222D; --ink: #E9EEF5; --soft: #A9B5C6; --line: #2D3746;
+  --green: #9FB6D3; --green-ink: #121B28; --rose: #B9CAE0; --card: #212937; --tape: rgba(159,182,211,.3);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17.5px; line-height: 1.65; margin: 0; }
+.wrap { max-width: 1060px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 36px); }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.15; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(38px, 6vw, 64px); }
+h2 { font-size: clamp(28px, 4vw, 40px); }
+h3 { font-size: 21px; }
+p { margin: 0; }
+a { color: inherit; }
+.hand { font-family: var(--hand); }
+:focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; }
+
+/* top */
+.top { padding-block: 18px; }
+.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; }
+.logo { font-family: var(--display); font-size: 23px; text-decoration: none; display: flex; gap: 10px; align-items: center; }
+.logo .hand { color: var(--rose); font-size: 20px; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 15.5px; }
+nav a { text-decoration: none; color: var(--soft); }
+nav a:hover { color: var(--ink); }
+
+/* hero */
+.hero { padding-block: clamp(28px, 6vw, 72px) clamp(40px, 7vw, 88px); }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px, 5vw, 60px); align-items: center; }
+.hero .hi { font-family: var(--hand); color: var(--rose); font-size: 24px; margin-bottom: 6px; }
+.hero h1 .ul { background-image: linear-gradient(transparent 62%, var(--tape) 62%, var(--tape) 92%, transparent 92%); }
+.hero .lede { margin-top: 18px; font-size: 19px; color: var(--soft); max-width: 33em; }
+.ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: var(--green-ink); font: 700 16px var(--body); padding: 13px 22px; border-radius: 10px; text-decoration: none; border: 0; cursor: pointer; }
+.btn:hover { filter: brightness(1.07); }
+.btn.quiet { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+
+/* wishlist card */
+.note { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 30px 28px 26px; transform: rotate(1.6deg); box-shadow: 0 1px 0 var(--line), 0 22px 40px -28px rgba(0,0,0,.45); max-width: 400px; justify-self: center; width: 100%; }
+.note::before { content: ""; position: absolute; top: -12px; left: 50%; width: 110px; height: 26px; margin-left: -55px; background: var(--tape); transform: rotate(-3deg); }
+.note h3 { font-family: var(--hand); font-weight: 700; font-size: 26px; color: var(--ink); }
+.note ul, ul.note { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 8px; font-family: var(--hand); font-size: 20px; }
+.note li, ul.note li { display: flex; gap: 10px; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: 6px; }
+.note li .tick { color: var(--green); font-weight: 700; }
+.note li .open { color: var(--soft); }
+.note li .price { margin-left: auto; color: var(--rose); white-space: nowrap; }
+.note small { display: block; margin-top: 12px; color: var(--soft); font-size: 13px; font-family: var(--body); }
+
+/* sections */
+section { padding-block: clamp(48px, 7vw, 84px); }
+.head { display: grid; gap: 10px; max-width: 40em; margin-bottom: 32px; }
+.head .hand { color: var(--rose); font-size: 22px; }
+.head p { color: var(--soft); }
+
+/* meet us */
+.us { background: var(--wash); }
+.us .wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(28px, 5vw, 56px); align-items: center; }
+.polaroid { background: #FFFFFF; padding: 14px 14px 52px; box-shadow: 0 18px 36px -24px rgba(0,0,0,.5); transform: rotate(-2.5deg); max-width: 340px; width: 100%; justify-self: center; position: relative; }
+.polaroid .pic { aspect-ratio: 4 / 5; max-width: 100%; background: #E6ECF3; display: grid; place-items: center; overflow: hidden; }
+.polaroid .pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.polaroid .cap { position: absolute; left: 0; right: 0; bottom: 14px; text-align: center; font-family: var(--hand); font-size: 22px; color: #2B2B2B; }
+.letter { display: grid; gap: 14px; max-width: 36em; }
+.letter p { font-size: 18px; }
+.sig { font-family: var(--hand); font-size: 30px; color: var(--rose); line-height: 1.2; }
+
+/* finds */
+.finds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+.find { padding: 22px 20px 22px 0; border-bottom: 1px solid var(--line); display: grid; gap: 4px; align-content: start; }
+.find h3 { font-size: 19px; }
+.find p { color: var(--soft); font-size: 15.5px; }
+.also { margin-top: 22px; color: var(--soft); font-size: 16px; }
+.also b { color: var(--ink); }
+
+/* steps */
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.step { display: grid; gap: 8px; align-content: start; }
+.step .n { font-family: var(--hand); font-size: 40px; color: var(--rose); line-height: 1; }
+.step p { color: var(--soft); font-size: 16px; }
+
+/* fees */
+.fees .box { border: 1.5px solid var(--line); border-radius: 14px; display: grid; grid-template-columns: 1fr 1fr 1.1fr; overflow: hidden; }
+.fee { padding: 26px; display: grid; gap: 6px; align-content: start; border-right: 1.5px solid var(--line); }
+.fee .amt { font-family: var(--display); font-size: 44px; line-height: 1; }
+.fee p { color: var(--soft); font-size: 15.5px; }
+.promise { padding: 26px; background: var(--wash); display: grid; gap: 6px; align-content: center; }
+.promise .hand { font-size: 28px; color: var(--green); line-height: 1.1; }
+.promise p { color: var(--soft); font-size: 15.5px; }
+
+/* form */
+.ask .wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(28px, 5vw, 56px); align-items: start; }
+form { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: clamp(18px, 3vw, 30px); display: grid; gap: 16px; min-width: 0; }
+.row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.f { display: grid; gap: 6px; min-width: 0; }
+label { font-weight: 700; font-size: 15px; }
+.hint { font-weight: 400; color: var(--soft); font-size: 13.5px; }
+input, textarea { width: 100%; font: 16px var(--body); color: var(--ink); background: var(--paper); border: 1.5px solid var(--line); border-radius: 9px; padding: 11px 13px; }
+textarea { min-height: 130px; resize: vertical; }
+input:focus, textarea:focus { border-color: var(--green); outline: none; }
+.pick { display: flex; flex-wrap: wrap; gap: 10px; }
+.pick label { font-weight: 600; display: flex; gap: 8px; align-items: center; border: 1.5px solid var(--line); border-radius: 9px; padding: 8px 14px; cursor: pointer; }
+.pick input { width: auto; accent-color: var(--green); }
+.small { font-size: 14px; color: var(--soft); }
+.thanks { border: 2px dashed var(--green); border-radius: 14px; padding: 22px; display: grid; gap: 10px; }
+.thanks .hand { font-size: 28px; color: var(--green); }
+.hp { position: absolute; left: -9999px; }
+
+/* faq */
+.faq { display: grid; gap: 10px; max-width: 46em; }
+details { border-bottom: 1px solid var(--line); padding: 12px 0; }
+summary { cursor: pointer; font-weight: 700; }
+details p { margin-top: 8px; color: var(--soft); }
+
+footer { padding-block: 34px; border-top: 1px solid var(--line); color: var(--soft); font-size: 14.5px; }
+footer .wrap { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; align-items: baseline; }
+footer .hand { color: var(--rose); font-size: 20px; }
+
+@media (max-width: 840px) {
+  .hero .wrap, .us .wrap, .ask .wrap, #planner .wrap { grid-template-columns: 1fr !important; }
+  .finds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .steps { grid-template-columns: 1fr; gap: 20px; }
+  .fees .box { grid-template-columns: 1fr; }
+  .fee { border-right: 0; border-bottom: 1.5px solid var(--line); }
+}
+@media (max-width: 520px) {
+  .finds { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
+}
+</style>
+<style>.article { max-width: 44em; } .article h2 { margin-top: 40px; margin-bottom: 10px; font-size: clamp(24px,3.4vw,32px); } .article p, .article li { font-size: 18px; } .article ul { padding-left: 22px; display: grid; gap: 8px; } .article p + p { margin-top: 12px; }</style>
+</head><body>
+<header class="top"><div class="wrap"><a class="logo" href="/"><svg width="34" height="22" viewBox="0 0 34 22" aria-hidden="true" style="flex:none"><circle cx="12" cy="11" r="8.5" fill="none" stroke="#4F6582" stroke-width="2.6"/><circle cx="22" cy="11" r="8.5" fill="none" stroke="#8DA4BE" stroke-width="2.6"/></svg>Twice Loved <span class="hand">wedding finds</span></a><nav aria-label="Sections"><a href="/quiz.html">Vibe quiz</a><a href="/#us">About us</a><a href="/#finds">What we find</a><a href="/#planner">Our planner</a><a href="/guide.html">Buying guide</a><a href="/#ask">Send your list</a></nav></div></header>
+<main><section><div class="wrap"><div class="article"><p class="hand" style="color:var(--rose);font-size:24px">Got it!</p><h1 style="font-size:clamp(34px,5vw,52px)">Thanks, your list is on its way to us.</h1>
+<p style="margin-top:16px;font-size:19px">We read every request ourselves. We'll email you options for your first 3 pieces free, and you only pay for the full list if you want it.</p>
+<p style="margin-top:24px"><a class="btn quiet" href="/guide.html">Read our buying guide while you wait</a></p></div></div></section></main>
+<footer><div class="wrap"><span><span class="hand">Twice Loved</span> · run by Joe &amp; Hailey</span><span>A sister shop to <a href="https://www.etsy.com/shop/HeritageVowsStudio" target="_blank" rel="noopener">Heritage Vows Studio</a></span></div></footer>
+</body></html>
